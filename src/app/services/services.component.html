@@ -1,0 +1,19 @@
+<div class="container section" >
+  <div class="row">
+    <h1>Our Services</h1>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-lg-4 d-flex align-items-center justify-content-center" *ngFor="let plan of plans">
+      <div class="card">
+        <div class="img-box">
+          <img src="{{plan.img}}" alt="">
+        </div>
+        <div class="details">
+          <h4>{{plan.title}}</h4>
+          <p>{{plan.desc}}</p>
+          <a href="" class="section-btn">DISCOVER MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,262 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merienda:wght@300..900&display=swap');
+
+$mainColor: #000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+
+  color: $mainColor; // Use the SCSS variable
+}
+
+.mainColor {
+  color: $mainColor; // Example of using the variable in a class
+}
+
+// .transition {
+//   transition: 0.5s !important;
+// }
+
+.mainBgColor {
+  background-color: #68ddb3;
+}
+
+.mainTextColor {
+  color: #68ddb3;
+}
+
+.mainTitleColor {
+  color: #418d71;
+}
+
+.secBgColor {
+  background-color: #00c7dc;
+}
+
+.secTextColor {
+  color: #00c7dc;
+}
+
+img {
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+li {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// -----------------------------
+@media (max-width:768px) {
+  #header {
+    padding: 30px !important;
+  }
+
+  .nav {
+    display: none !important;
+  }
+
+  .search {
+    display: none !important;
+  }
+
+  .banner {
+    padding: 120px 30px !important;
+
+    .lead {
+      bottom: 100px !important;
+      width: 150px !important;
+      height: 150px !important;
+
+    }
+
+    .move-down {
+
+      i {
+        font-size: 2em !important;
+      }
+    }
+
+    .slide-loader {
+      bottom: 20px !important;
+right: 20px !important;
+    }
+
+    .share {
+      left: 5px !important;
+    }
+  }
+
+  .bg-slide {
+    .content {
+      width: 80vw !important;
+
+      h1 {
+        font-size: 3em !important;
+      }
+
+      p {
+        font-size: 0.8em !important;
+      }
+    }
+  }
+
+  .circle {
+    &.bg {
+      width: 140vh !important;
+      height: 140vh !important;
+    }
+
+    &.large {
+      width: 70vh !important;
+      height: 70vh !important;
+    }
+
+    &.small {
+      width: 35vh !important;
+      height: 35vh !important;
+    }
+
+    &.active {
+
+
+
+      .circle {
+        &.bg {
+          transform: translate(0, 0) rotateZ(0) !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+
+        &.large {
+          transform: translate(0, 0) rotateZ(360deg) !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+
+        &.small {
+          transform: translate(0, 0) rotateZ(-720deg) !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+      }
+    }
+  }
+
+  .section-show {
+    padding: 150px 30px 100px !important;
+  }
+
+  #aboutSection {
+    h4{
+      margin-top: 50px !important;
+    }
+    .img-box {
+
+      img {
+        max-width: 80vw !important;
+      }
+      .corner-img{
+        width: 25vw !important;
+        right: -20px !important;
+      }
+    }
+  }
+  #portfolio-filter{
+    li{
+      padding: 8px !important;
+    }
+  }
+}
+.sci {
+  @media (min-width: 0px) and (max-width: 768px) {
+    position: fixed;
+    bottom: 0px;
+  }
+
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 5px;
+  z-index: 9999999;
+
+  ul {
+    li {
+      font-size: 16px;
+      padding: 2px 0;
+      list-style: none;
+
+      a {
+        color: var(--text-color);
+
+      }
+    }
+  }
+
+  p {
+    font-size: 14px;
+
+    span {
+      font-size: 18px;
+
+      color: #5692cd;
+
+      font-weight: 700;
+    }
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-style: 25px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #b1995b;
+    }
+  }
+}
+

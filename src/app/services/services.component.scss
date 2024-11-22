@@ -1,0 +1,115 @@
+.section {
+  h1 {
+    font-family: 'great vibes', cursive;
+    font-weight: 400;
+    font-size: 4em;
+    letter-spacing: 1px;
+    margin-bottom: 150px;
+    text-align: center;
+  }
+
+  .card {
+    position: relative;
+    margin: 20px 0;
+    width: 350px;
+    height: 500px;
+    background: #ffffff;
+    border: none;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s !important;
+    border-radius: 0;
+    box-shadow: inset 300px 0 50px rgba($color: #000000, $alpha: 0.25);
+
+    &:hover {
+      transform: perspective(2000px) rotate(-10deg);
+      box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      transition: ease-in-out 1s !important;
+
+      .img-box {
+        transform: rotateY(-130deg);
+      }
+    }
+
+    .img-box {
+      position: relative;
+      border-style: none;
+      width: 100%;
+      height: 100%;
+      transform-origin: left;
+      z-index: 1;
+      transition: 1s;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 50px 20px 20px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: url('/assets/drive-download-20241119T161356Z-001/bg-tree.png');
+        background-position: center;
+        background-size: cover;
+        opacity: 0.1;
+      }
+
+      h4 {
+        font-family: "Great Vibes", cursive;
+
+        &::first-letter {
+          color: #b1995b;
+          font-size: 1.5em;
+        }
+
+      }
+
+      .section-btn {
+        position: relative;
+        text-decoration: none;
+        color: #111111;
+        text-transform: uppercase;
+        font-weight: 300;
+        transition: 0.5s;
+
+        &:hover {
+          color: #b1995b;
+
+          &::before {
+            left: 20%;
+            background-color: #b1995b;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: -10px;
+          width: 85%;
+          height: 1px;
+          background: #111111;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="container section">
+  <div class="row">
+    <h1>Our Portfolio</h1>
+  </div>
+  <ul id="portfolio-filter" class="d-flex align-items-center justify-content-center">
+
+    <li (click)="filterPortfolio('*', $event)" class="filter-active">All</li>
+    <li (click)="filterPortfolio('.filter-wedding', $event)">Wedding</li>
+    <li (click)="filterPortfolio('.filter-ceremony', $event)">Ceremony</li>
+    <li (click)="filterPortfolio('.filter-honeymoon', $event)">Honeymoon</li>
+  </ul>
+  <div class="row portfolio-container" #portfolioContainer>
+    <div class="col-lg-4 col-md-6 portfolio-item " *ngFor="let plan of plans"   [ngClass]="plan.filter">
+      <div class="portfolio-img">
+        <img src="{{plan.img}}" class="img-fluid" alt="">
+      </div>
+      <div class="portfolio-info">
+        <h4>{{plan.title1}}</h4>
+        <p>{{plan.title2}}</p>
+        <a href="{{plan.img}}" class="portfolio-lightbox preview-link"
+          title="Wedding Planning 1"><i class="bi bi-plus"></i></a>
+        <a href="#" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<header id='header'>
+  <a href="" class="logo">Wedding</a>
+  <a class="menu" (click)="toggle()">
+    <i *ngIf="close" class="bi bi-list open"></i>
+    <i *ngIf="!close" class="bi bi-x-lg close"></i>
+  </a>
+  <ul class="nav">
+    <li><a (click)="onTapChange('home')" class="nav-btn active"><i class="bi bi-house"></i></a></li>
+    <li><a (click)="onTapChange('About')">About</a></li>
+    <li><a (click)="onTapChange('Services')">Services</a></li>
+    <li><a (click)="onTapChange('Portfolio')">Portfolio</a></li>
+    <li><a (click)="onTapChange('Contact')">Contact</a></li>
+  </ul>
+  <div class="search">
+    <input type="text" placeholder="Search">
+    <i class="bi bi-search"></i>
+  </div>
+</header>
+<ul class="nav-mobile">
+  <li>
+    <a href="/" class="nav-btn active" (click)="onTapChange('home')">
+      <i class="bi bi-house"></i>
+    </a>
+  </li>
+  <li><a class="nav-btn" (click)="onTapChange('About')">About</a></li>
+  <li><a class="nav-btn" (click)="onTapChange('Services')">Services</a></li>
+  <li><a class="nav-btn" (click)="onTapChange('Portfolio')">Portfolio</a></li>
+  <li><a class="nav-btn" (click)="onTapChange('Contact')">Contact</a></li>
+</ul>

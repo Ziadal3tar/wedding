@@ -1,0 +1,123 @@
+.section {
+  h1 {
+    font-family: 'great vibes', cursive;
+    font-weight: 400;
+    font-size: 4em;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  #portfolio-filter {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      margin: 10px 5px;
+      font-weight: 0.85em;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #111111;
+      transition: 0.3s;
+      padding: 8px 20px;
+      text-align: center;
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+        height: 2px;
+        width: 50%;
+        background: #b1995b;
+        visibility: hidden;
+        opacity: 0;
+        transform-origin: center;
+      }
+
+      &:hover::before,
+      &.filter-active::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .portfolio-container {
+    .portfolio-item {
+      position: relative;
+      margin-bottom: 30px;
+
+      &:hover {
+        .portfolio-img {
+          img {
+            transform: scale(1.15);
+          }
+        }
+
+        .portfolio-info {
+          opacity: 1;
+        }
+      }
+
+      .portfolio-img {
+        overflow: hidden;
+
+        img {
+          transition: all 0.5s;
+        }
+      }
+
+      .portfolio-info {
+        opacity: 0;
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 0;
+        z-index: 3;
+        transition: all 0.3s;
+        background: #b1995b;
+        padding: 12px 15px;
+
+        .preview-link,
+        .details-link {
+          position: absolute;
+          right: 40px;
+          font-size: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #ffffff;
+          transition: 0.5s;
+
+          &:hover {
+            color: #111111;
+          }
+        }
+
+        .details-link {
+          right: 10px;
+        }
+
+        h4 {
+          font-family: "Great Vibes", cursive;
+          font-size: 18px;
+          color: #ffffff;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+
+        p {
+          color: #f9fcfe;
+          font-size: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
