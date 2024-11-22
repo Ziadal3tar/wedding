@@ -17,17 +17,17 @@ export class BannerComponent {
   @Input()tap:any
   slides:any[]=[
     {
-      img:'/assets/drive-download-20241119T161356Z-001/wedding-1.jpg',
+      img:'./assets/drive-download-20241119T161356Z-001/wedding-1.jpg',
       title:'Wedding',
       desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quod eveniet eius reiciendis, nesciunt rem, unde nihil laboriosam commodi quis impedit consequatur, nemo sit? Aspernatur nam, sunt dicta adipisci deleniti voluptatem accusantium quae eligendi magnam optio consectetur? Reiciendis, facere consequatur. Exercitationem blanditiis rem nihil vel beatae itaque, sunt repellat eius.'
     },
     {
-      img:'/assets/drive-download-20241119T161356Z-001/wedding-2.jpg',
+      img:'./assets/drive-download-20241119T161356Z-001/wedding-2.jpg',
       title:'Wedding',
       desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quod eveniet eius reiciendis, nesciunt rem, unde nihil laboriosam commodi quis impedit consequatur, nemo sit? Aspernatur nam, sunt dicta adipisci deleniti voluptatem accusantium quae eligendi magnam optio consectetur? Reiciendis, facere consequatur. Exercitationem blanditiis rem nihil vel beatae itaque, sunt repellat eius.'
     },
     {
-      img:'/assets/drive-download-20241119T161356Z-001/wedding-3.jpg',
+      img:'./assets/drive-download-20241119T161356Z-001/wedding-3.jpg',
       title:'Wedding',
       desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quod eveniet eius reiciendis, nesciunt rem, unde nihil laboriosam commodi quis impedit consequatur, nemo sit? Aspernatur nam, sunt dicta adipisci deleniti voluptatem accusantium quae eligendi magnam optio consectetur? Reiciendis, facere consequatur. Exercitationem blanditiis rem nihil vel beatae itaque, sunt repellat eius.'
     }
