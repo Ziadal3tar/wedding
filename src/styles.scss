@@ -83,7 +83,10 @@ a {
 }
 
 // -----------------------------
-@media (max-width:768px) {
+@media (max-width: 768px) {
+  .menu {
+    display: block !important;
+}
   #header {
     padding: 30px !important;
   }
@@ -115,7 +118,7 @@ a {
 
     .slide-loader {
       bottom: 20px !important;
-right: 20px !important;
+      right: 20px !important;
     }
 
     .share {
@@ -159,19 +162,18 @@ right: 20px !important;
 
       .circle {
         &.bg {
-          transform: translate(0, 0) rotateZ(0) !important;
           opacity: 1 !important;
           visibility: visible !important;
         }
 
         &.large {
-          transform: translate(0, 0) rotateZ(360deg) !important;
+          rotate: 360deg;
           opacity: 1 !important;
           visibility: visible !important;
         }
 
         &.small {
-          transform: translate(0, 0) rotateZ(-720deg) !important;
+          rotate: -360deg;
           opacity: 1 !important;
           visibility: visible !important;
         }
@@ -184,26 +186,30 @@ right: 20px !important;
   }
 
   #aboutSection {
-    h4{
+    h4 {
       margin-top: 50px !important;
     }
+
     .img-box {
 
       img {
         max-width: 80vw !important;
       }
-      .corner-img{
+
+      .corner-img {
         width: 25vw !important;
         right: -20px !important;
       }
     }
   }
-  #portfolio-filter{
-    li{
+
+  #portfolio-filter {
+    li {
       padding: 8px !important;
     }
   }
 }
+
 .sci {
   @media (min-width: 0px) and (max-width: 768px) {
     position: fixed;
@@ -259,4 +265,3 @@ right: 20px !important;
     }
   }
 }
-

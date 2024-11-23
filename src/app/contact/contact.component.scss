@@ -63,33 +63,39 @@
     .form-group {
       padding-bottom: 8px;
     }
-    input, textarea{
+
+    input,
+    textarea {
       border-radius: 0;
       box-shadow: none !important;
       outline: none;
       font-size: 15px;
       border-color: #b1995b;
       outline: none;
-      &:focus{
+
+      &:focus {
         border-color: #b1995b;
         outline: none;
       }
     }
-    }
-    textarea{
+  }
+
+  textarea {
     padding: 10px 12px;
 
   }
-  button[type='submit']{
-background: #b1995b;
-border: 1px solid aqua;
-padding: 10px 25px;
-color: #ffffff;
-transition: 0.5s;
-margin-top:20px;
-&:hover{
-  background: #ffffff;
-  color: #b1995b;
-}
-}
+
+  button[type='submit'] {
+    background: #b1995b;
+    border: 1px solid #b1995b;
+    padding: 10px 25px;
+    color: #ffffff;
+    transition: 0.5s;
+    margin-top: 20px;
+
+    &:hover {
+      background: #ffffff;
+      color: #b1995b;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+
 <div class="container section">
   <div class="row">
     <h1>Our Portfolio</h1>
@@ -9,18 +10,44 @@
     <li (click)="filterPortfolio('.filter-ceremony', $event)">Ceremony</li>
     <li (click)="filterPortfolio('.filter-honeymoon', $event)">Honeymoon</li>
   </ul>
-  <div class="row portfolio-container" #portfolioContainer>
-    <div class="col-lg-4 col-md-6 portfolio-item " *ngFor="let plan of plans"   [ngClass]="plan.filter">
-      <div class="portfolio-img">
-        <img src="{{plan.img}}" class="img-fluid" alt="">
+  <div class="portfolio-container d-flex align-items-center justify-content-center">
+
+    <div class="col-12 col-md-6 col-lg-4 column p-3">
+      <div class="box pb-3" *ngFor="let plan of plans1" [ngClass]="plan.filter" [ngClass]="{'filtered': plan.filter == filter}">
+        <img loading="lazy" src="{{plan.img}}" alt="">
+        <div class="portfolio-info">
+          <h4>{{plan.title1}}</h4>
+          <p>{{plan.title2}}</p>
+          <a class="portfolio-lightbox preview-link" title="Wedding Planning 1"><i class="bi bi-plus"></i></a>
+          <a href="#" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+        </div>
       </div>
-      <div class="portfolio-info">
-        <h4>{{plan.title1}}</h4>
-        <p>{{plan.title2}}</p>
-        <a href="{{plan.img}}" class="portfolio-lightbox preview-link"
-          title="Wedding Planning 1"><i class="bi bi-plus"></i></a>
-        <a href="#" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
-      </div>
+
     </div>
+    <div class="col-12 col-md-6 col-lg-4 column p-3" >
+      <div class="box pb-3" *ngFor="let plan of plans2" [ngClass]="plan.filter" [ngClass]="{'filtered': plan.filter == filter}">
+        <img loading="lazy" src="{{plan.img}}" alt="">
+        <div class="portfolio-info">
+          <h4>{{plan.title1}}</h4>
+          <p>{{plan.title2}}</p>
+          <a class="portfolio-lightbox preview-link" title="Wedding Planning 1"><i class="bi bi-plus"></i></a>
+          <a href="#" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 column p-3" >
+      <div class="box pb-3" *ngFor="let plan of plans"  [ngClass]="plan.filter" [ngClass]="{'filtered': plan.filter == filter}">
+        <img loading="lazy" src="{{plan.img}}" alt="">
+        <div class="portfolio-info">
+          <h4>{{plan.title1}}</h4>
+          <p>{{plan.title2}}</p>
+          <a class="portfolio-lightbox preview-link" title="Wedding Planning 1"><i class="bi bi-plus"></i></a>
+          <a href="#" class="details-link" title="More Details"><i class="bi bi-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </div>

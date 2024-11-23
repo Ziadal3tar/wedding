@@ -48,19 +48,25 @@
 
       .circle {
         &.bg {
-          transform: translate(0, 0) rotateZ(-360deg);
+          // rotate:360deg ;
+          @media (min-width:769px) {
+            rotate:360deg ;
+
+          }
           opacity: 1;
           visibility: visible;
         }
 
         &.large {
-          transform: translate(0, 0) rotateZ(720deg);
+          rotate:-720deg ;
+
           opacity: 1;
           visibility: visible;
         }
 
         &.small {
-          transform: translate(0, 0) rotateZ(-720deg);
+          rotate:720deg ;
+
           opacity: 1;
           visibility: visible;
         }
@@ -98,7 +104,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transform: translate(0, 0) rotateZ(0);
+      // transform: translate(0, 0) rotateZ(0);
       // opacity: 0;
       // overflow: hidden;
       transition: 3s;

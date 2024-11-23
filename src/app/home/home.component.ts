@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  tap: string = '';
+  tap: string ='';
 
   receiveData(tap: any) {
     this.tap = tap;
